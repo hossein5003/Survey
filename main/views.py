@@ -1,3 +1,4 @@
+import generics as generics
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render, redirect
 from django.urls import reverse
@@ -27,3 +28,15 @@ def show_survey(request, id=None):
         "form": form,
     }
     return render(request, "lewagon/survey.html", context)
+
+
+class CreateSurvey(generics.CreateAPIView):
+    pass
+
+
+class CreateQuestion(generics.CreateAPIView):
+    pass
+
+
+class CreateQuestion(generics.CreateAPIView):
+    pass

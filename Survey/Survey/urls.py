@@ -16,6 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from account.views import LogInView, LogOutView, SignUpView, ActivateView
+from main.views import CreateSurvey, CreateQuestion
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('log-in/', LogInView.as_view(), name='log_in'),
+    path('log-out/', LogOutView.as_view(), name='log_out'),
+
+    path('sign-up/', SignUpView.as_view(), name='sign_up'),
+    path('activate/', ActivateView.as_view(), name='activate'),
+
+    path('survey/create/', CreateSurvey.as_view(), name='create'),
+    path('create/question/', CreateQuestion.as_view(), name='create_question'),
 ]

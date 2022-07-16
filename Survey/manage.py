@@ -3,6 +3,8 @@
 import os
 import sys
 
+ALLOWED_HOSTS = ['*']
+
 
 def main():
     """Run administrative tasks."""
